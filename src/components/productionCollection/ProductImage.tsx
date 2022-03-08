@@ -1,5 +1,6 @@
 import React from "react";
 import { Image, Typography } from "antd";
+import { useNavigate } from "react-router-dom";
 interface PropsType {
   id: string | number;
   size: "large" | "small";
@@ -14,8 +15,13 @@ export const ProductImage: React.FC<PropsType> = ({
   imageSrc,
   price,
 }) => {
+  const naviagte = useNavigate();
   return (
-    <>
+    <div
+      onClick={() => {
+        naviagte(`/detail/${id}`);
+      }}
+    >
       {size == "large" ? (
         <Image src={imageSrc} height={285} width={490}></Image>
       ) : (
@@ -27,6 +33,6 @@ export const ProductImage: React.FC<PropsType> = ({
           ¥ {price} 起
         </Typography.Text>
       </div>
-    </>
+    </div>
   );
 };
