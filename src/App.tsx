@@ -1,5 +1,5 @@
 import styles from "./App.module.css";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home, SignInPage, RegisterPage, DetailPage } from "./pages";
 function App() {
   return (

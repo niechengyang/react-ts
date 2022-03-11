@@ -22,7 +22,7 @@ export const ProductImage: React.FC<PropsType> = ({
         naviagte(`/detail/${id}`);
       }}
     >
-      {size == "large" ? (
+      {size === "large" ? (
         <Image src={imageSrc} height={285} width={490}></Image>
       ) : (
         <Image src={imageSrc} height={120} width={240}></Image>
