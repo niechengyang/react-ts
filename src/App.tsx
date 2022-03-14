@@ -1,6 +1,12 @@
 import styles from "./App.module.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, SignInPage, RegisterPage, DetailPage } from "./pages";
+import {
+  Home,
+  SignInPage,
+  RegisterPage,
+  DetailPage,
+  SearchPage,
+} from "./pages";
 function App() {
   return (
     <div className={styles.App}>
@@ -9,7 +15,12 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/signIn/" element={<SignInPage />}></Route>
           <Route path="/register/" element={<RegisterPage />}></Route>
-          <Route path="/detail/:touristRouteId" element={<DetailPage />}></Route>
+          <Route
+            path="/detail/:touristRouteId"
+            element={<DetailPage />}
+          ></Route>
+          <Route path="/search/" element={<SearchPage/>}></Route>
+          <Route path="/search/:keywords" element={<SearchPage/>}></Route>
           <Route path="*" element={<h1>404 not found 页面去火星了</h1>}></Route>
         </Routes>
       </BrowserRouter>
