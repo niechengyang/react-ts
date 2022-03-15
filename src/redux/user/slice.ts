@@ -1,11 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
-interface ProductSliceState {
+interface UserState {
   loading: boolean;
   error: string | null;
   token: string | null;
 }
-const initialState: ProductSliceState = {
+const initialState: UserState = {
   loading: false,
   error: null,
   token: null,
